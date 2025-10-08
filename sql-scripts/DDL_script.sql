@@ -1,3 +1,5 @@
+-- create the E_commerce database and schema
+
 create database E_commerce
 use E_commerce
 
