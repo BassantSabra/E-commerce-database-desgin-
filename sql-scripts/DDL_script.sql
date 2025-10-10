@@ -51,7 +51,7 @@ foreign key (productID) references sales.products(product_id)
 /* create payment table to store product information */
 
 if OBJECT_ID ('sales.payment' ,'u') is not null drop table sales.payment
-create table payment(payment_id int identity (10001,1) primary key ,
+create table sales.payment(payment_id int identity (10001,1) primary key ,
 order_id int,
 payment_method varchar(50) not null,
 payment_date date not null default getdate(),
@@ -63,7 +63,7 @@ foreign key (order_id) references sales.orders(order_id)
 
 if OBJECT_ID ('sales.reviews' ,'u' ) is not null drop table sales.reviews
 
-create table reviews (review_id int identity(201,1) primary key,
+create table sales.reviews (review_id int identity(201,1) primary key,
 userID int,
 product_id int,
 rating  int ,
